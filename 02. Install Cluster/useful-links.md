@@ -33,6 +33,7 @@
 
 ##### join worker nodes
 * Kubeadm Join Command: https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join/
+* Cilium firewall rules: https://docs.cilium.io/en/stable/operations/system_requirements/#firewall-rules 
 * Troubleshooting Cilium Connection: https://docs.cilium.io/en/stable/operations/troubleshooting/
 
 

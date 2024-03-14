@@ -80,7 +80,7 @@
 ##### check cilium status
     cilium status
     kubectl -n kube-system exec cilium-2hq5z -- cilium-dbg status
-
+    cilium connectivity test
 
 ### Join worker nodes
 
