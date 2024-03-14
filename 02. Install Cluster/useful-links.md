@@ -29,11 +29,11 @@
 * CoreDNS: https://coredns.io/plugins/kubernetes/
 * CNI Specification: https://github.com/containernetworking/cni/blob/master/SPEC.md#network-configuration
 * Cluster Networking - Official Docs: https://kubernetes.io/docs/concepts/cluster-administration/networking/
-* Weave Net: https://www.weave.works/docs/net/latest/kubernetes/kube-addon/
+* Cilium: https://docs.cilium.io/en/stable/overview/intro/ 
 
 ##### join worker nodes
 * Kubeadm Join Command: https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join/
-* Troubleshooting Weave Connection: https://www.weave.works/docs/net/latest/tasks/ipam/troubleshooting-ipam/
+* Troubleshooting Cilium Connection: https://docs.cilium.io/en/stable/operations/troubleshooting/
 
 
 
