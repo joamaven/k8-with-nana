@@ -63,13 +63,24 @@
 
 ### Install pod network plugin
 
-##### download and install the manifest
-    kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+##### Install CLI 
 
-[Link to the Weave-net installation guide](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/#-installation)    
+    CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
+    CLI_ARCH=amd64
+    if [ "$(uname -m)" = "aarch64" ]; then CLI_ARCH=arm64; fi
+    curl -L --fail --remote-name-all https://github.com/cilium/cilium-cli/releases/download/${CILIUM_CLI_VERSION}/cilium-linux-${CLI_ARCH}.tar.gz{,.sha256sum}
+    sha256sum --check cilium-linux-${CLI_ARCH}.tar.gz.sha256sum
+    sudo tar xzvfC cilium-linux-${CLI_ARCH}.tar.gz /usr/local/bin
+    rm cilium-linux-${CLI_ARCH}.tar.gz{,.sha256sum}
+    
+##### Install the plugin 
+    cilium install 
+[Link to the Cilium installation guide](https://docs.cilium.io/en/latest/gettingstarted/k8s-install-default/)    
 
-##### check weave net status
-    kubectl exec -n kube-system weave-net-1jkl6 -c weave -- /home/weave/weave --local status
+##### check cilium status
+    cilium status
+    kubectl -n kube-system exec cilium-2hq5z -- cilium-dbg status
+    cilium connectivity test
 
 ### Join worker nodes
 
