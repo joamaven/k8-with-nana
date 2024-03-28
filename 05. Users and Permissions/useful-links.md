@@ -9,7 +9,6 @@
 
 ##### API groups
 * Resource Types and corresponding apiGroup: https://kubernetes.io/docs/reference/kubectl/overview/#resource-types
-* API Groups: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#-strong-api-groups-strong
 
 ##### service account
 * Configure Service Account: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
