@@ -14,7 +14,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt-get update
 # check available kubeadm versions (when manually executing)
 apt-cache madison kubeadm
-# Install version 1.21.0 for all components
+# Install version 1.28.0 for all components
 sudo apt-get install -y kubelet=1.28.0-1.1 kubeadm=1.28.0-1.1 kubectl=1.28.0-1.1
 sudo apt-mark hold kubelet kubeadm kubectl
 ## apt-mark hold prevents package from being automatically upgraded or removed
