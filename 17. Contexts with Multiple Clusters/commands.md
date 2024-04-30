@@ -10,7 +10,7 @@
 ##### switch to another context
     kubectl set-context context-name
 
-##### change user or cluter name for any context
+##### change user or cluster name for any context
     kubectl config set-context --help
     kubectl config set-context context-name --user=user_name --cluster=cluster_name
 
